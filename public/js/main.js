@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 const chatForm = document.getElementById('chat-form');
 const vidIdForm = document.getElementById('video-id-form');
 const userList = document.getElementById('users');
@@ -136,6 +135,7 @@ $(document).ready( function() {
     });
   }
   
+    var done = false;
     function onPlayerStateChange(event) {
         switch(event.data) {
             case 0:
@@ -151,17 +151,17 @@ $(document).ready( function() {
                 socket.emit('pauseVideoFrom', player.getCurrentTime())
         }
     }
-    // function onPlayerReady(event) {
-    //     // $("#play-button").click(function () {
-    //     //     player.playVideo();
-    //     // });
-    //     // $("#pause-button").click(function () {
-    //     //     player.pauseVideo();
-    //     // });
-    //     // $("#stop-button").click(function () {
-    //     //     player.stopVideo();
-    //     // });
-    // }
+    function onPlayerReady(event) {
+        // $("#play-button").click(function () {
+        //     player.playVideo();
+        // });
+        // $("#pause-button").click(function () {
+        //     player.pauseVideo();
+        // });
+        // $("#stop-button").click(function () {
+        //     player.stopVideo();
+        // });
+    }
     function catchError(event)
     {
       if(event.data == 100) console.log("Can't play, oopsie");
@@ -184,7 +184,7 @@ $(document).ready( function() {
 
     //volume controls
 
-    $(document).ready(function () {
+    $(document).ready(function (e) {
       $("#volume").on("mousemove", function () {
         //alert();
         $(".vol").text($(this).val());
