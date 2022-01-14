@@ -51,8 +51,8 @@ socket.on('allUsers', (users) => {
 //register the NAB
 
 socket.on('checkNab', () => {
-    document.getElementById("pause-button").onclick = function() { player.pauseVideo(); };
-    document.getElementById("play-button").onclick = function() { player.playVideo(); };
+    document.getElementById("pause-button").style.visibility = 'visible';
+    document.getElementById("play-button").style.visibility = 'visible';
     document.getElementById("video-id-form").style.visibility = 'visible';
 })
 

@@ -231,6 +231,7 @@ p.text {
     bottom: 10%;
     left: 30%;
     transform: scale(2);
+    visibility: hidden;
 }
 
 .controls-container a {
