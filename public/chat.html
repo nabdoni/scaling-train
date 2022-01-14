@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/style.css">
+    <title>Nab's Twisted MIND</title>
+</head>
+
+<body>
+    <div class="video-id-container">
+        <form id="video-id-form">
+            <input id="vid" type="text" placeholder="Enter Video ID" required autocomplete="off" />
+            <button class="button">Launch vid</button>
+        </form>
+    </div>
+    <div class="controls-container">
+        <a href="#" id="play-button"><i class="fas fa-play"></i></a>
+        <a href="#" id="pause-button"><i class="fas fa-pause"></i></a>
+    </div>
+    <div class="video-container">
+        <div id="player"></div>
+    </div>
+    <div class="chat-container">
+        <header class="chat-header">
+            <h1>Chat here</h1>
+            <a href="index.html" class="btn">Leave Room</a>
+        </header>
+        <main class="chat-main">
+            <div class="chat-sidebar">
+                <h3>Users</h3>
+                <ul id="users">
+                </ul>
+            </div>
+            <div class="chat-messages">
+            </div>
+        </main>
+        <div class="chat-form-container">
+            <form id="chat-form">
+                <input id="msg" type="text" placeholder="Enter Message" required autocomplete="off" />
+                <button class="btn"> Send</button>
+            </form>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.10.3/qs.min.js" integrity="sha512-juaCj8zi594KHQqb92foyp87mCSriYjw3BcTHaXsAn4pEB1YWh+z+XQScMxIxzsjfM4BeVFV3Ij113lIjWiC2w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
