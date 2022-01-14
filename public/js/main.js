@@ -181,3 +181,13 @@ $(document).ready( function() {
     socket.on('globalPause', () => {
             player.pauseVideo();
     });
+
+    //volume controls
+
+    $(document).ready(function (e) {
+      $("#volume").on("mousemove", function () {
+        //alert();
+        $(".vol").text($(this).val());
+        player.setVolume($(this).val());
+      });
+    });
