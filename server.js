@@ -2,9 +2,8 @@ const path = require('path');
 const express = require('express');
 const http = require('http');
 const socketio = require('socket.io');
-const { formatMessage, formatUser } = require('./utils/messages')
-const { userJoin, getUserById, userLeaves, getUsers, checkIfNab } = require('./utils/users')
-const { startIt, pauseIt, stopIt } = require('./utils/video')
+const formatMessage = require('./utils/messages')
+const { userJoin, getUserById, userLeaves, getUsers } = require('./utils/users')
 
 const app = express();
 const server = http.createServer(app);
@@ -32,7 +31,7 @@ io.on('connection', socket => {
 
 
     //disconnect message
-    socket.on('disconnect', (username) => {
+    socket.on('disconnect', () => {
         const user = userLeaves(socket.id);
         if (user) {
             io.emit('message', formatMessage(botName, `${user[0].username} has left :(`));
