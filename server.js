@@ -14,7 +14,7 @@ const io = socketio(server);
 app.use(express.static(path.join(__dirname, 'public')));
 
 //getting username from params
-const botName = 'Nab Slave';
+const botName = 'Nabbot';
 
 //connection listener
 io.on('connection', socket => {
