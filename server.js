@@ -22,7 +22,7 @@ io.on('connection', socket => {
         const user = userJoin(socket.id, username, username === "Nab" ? true : false);
         io.emit('allUsers', getUsers());
         //welcome message to user
-        socket.emit('message', formatMessage(botName, `Welcome to the show, ${username}!`));
+        socket.emit('message', formatMessage(botName, `Welcome to the show, ${username}! If the YouTube frame looks wrong, try zooming or unzooming your browser window.`));
         if (user.isNab) {
             socket.emit('checkNab', 'Nab!');
         }
