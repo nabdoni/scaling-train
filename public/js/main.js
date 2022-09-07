@@ -124,8 +124,8 @@ $(document).ready( function() {
   
   function onYouTubePlayer() {
     player = new YT.Player('player', {
-      height: '690',
-      width: '1080',
+      height: '505',
+      width: '853',
       videoId: getArtistId(),
       playerVars: { controls:0, showinfo: 0, rel: 0, showsearch: 0, iv_load_policy: 3 },
       events: {

@@ -74,6 +74,8 @@ a {
     overflow-y: auto;
     font-size: 1vw !important;
     width: 100px;
+    /* TEMPORARILY DEACTIVATE USERLIST*/
+    display: none;
 }
 
 .chat-sidebar h2 {
